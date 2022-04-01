@@ -13,6 +13,7 @@ public:
 	
 	Aircraft(Type type, Game* game);
 	unsigned int getCategory() const;
+	virtual void drawCurrent() const;
 	
 private:
 

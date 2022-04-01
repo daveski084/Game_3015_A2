@@ -34,6 +34,10 @@ void Aircraft::buildCurrent()
 	game->getRenderItems().push_back(std::move(render));
 }
 
+void Aircraft::drawCurrent() const
+{
+
+}
 
 unsigned int Aircraft::getCategory() const
 {
