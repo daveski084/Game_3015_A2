@@ -1,0 +1,48 @@
+\hypertarget{_command_queue_8h_source}{}\doxysection{Command\+Queue.\+h}
+\label{_command_queue_8h_source}\index{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/CommandQueue.h@{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/CommandQueue.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <Queue>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}SceneNode.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/* Command structure from page 2 of assignment 2.*/}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_command}{Command}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \mbox{\hyperlink{struct_command}{Command}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{comment}{// Command name}}
+\DoxyCodeLine{14     std::string name;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{comment}{// Lambda function for command.}}
+\DoxyCodeLine{17     std::function<void(\mbox{\hyperlink{class_scene_node}{SceneNode}}\&, \textcolor{keyword}{const} GameTimer\& gt)> action;}
+\DoxyCodeLine{18     }
+\DoxyCodeLine{19     \textcolor{comment}{// Command category}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} category;}
+\DoxyCodeLine{21 \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{comment}{// Command queue structure from page 4 of assignment 2. }}
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_command_queue}{CommandQueue}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     \textcolor{comment}{//Using queue for FIFO commands.}}
+\DoxyCodeLine{28     std::queue<Command> mQueue;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{comment}{// Push commands into the command queue.}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} Push(\textcolor{keyword}{const} \mbox{\hyperlink{struct_command}{Command}} newCommand);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{// Remove commands from the command queue.}}
+\DoxyCodeLine{36     \mbox{\hyperlink{struct_command}{Command}} Pop();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{// Return if queue is empty. }}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} IsEmpty() \textcolor{keyword}{const};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 }
+
+\end{DoxyCode}

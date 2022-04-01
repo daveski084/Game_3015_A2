@@ -1,0 +1,28 @@
+\hypertarget{_aircraft_8h_source}{}\doxysection{Aircraft.\+h}
+\label{_aircraft_8h_source}\index{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/Aircraft.h@{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/Aircraft.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Entity.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_aircraft}{Aircraft}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8     \textcolor{keyword}{enum} Type}
+\DoxyCodeLine{9     \{}
+\DoxyCodeLine{10         Eagle,}
+\DoxyCodeLine{11         Raptor,}
+\DoxyCodeLine{12     \};}
+\DoxyCodeLine{13     }
+\DoxyCodeLine{14     \mbox{\hyperlink{class_aircraft}{Aircraft}}(Type type, \mbox{\hyperlink{class_game}{Game}}* game);}
+\DoxyCodeLine{15     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getCategory() \textcolor{keyword}{const};}
+\DoxyCodeLine{16     }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} buildCurrent();}
+\DoxyCodeLine{20     Type mType;}
+\DoxyCodeLine{21     std::string mSprite;}
+\DoxyCodeLine{22 \};}
+
+\end{DoxyCode}

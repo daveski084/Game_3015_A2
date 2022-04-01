@@ -1,0 +1,35 @@
+\hypertarget{_enemy_8h_source}{}\doxysection{Enemy.\+h}
+\label{_enemy_8h_source}\index{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/Enemy.h@{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/Enemy.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Entity.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_enemy}{Enemy}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \textcolor{keyword}{enum} Type}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         Eagle,}
+\DoxyCodeLine{12         Raptor,}
+\DoxyCodeLine{13     \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{class_enemy}{Enemy}}(Type type, \mbox{\hyperlink{class_game}{Game}}* game);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} drawCurrent() \textcolor{keyword}{const};}
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} buildCurrent();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23     Type mType;}
+\DoxyCodeLine{24     \textcolor{keywordtype}{string} mSprite;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+
+\end{DoxyCode}

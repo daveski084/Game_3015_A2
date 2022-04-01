@@ -1,0 +1,34 @@
+\hypertarget{_sprite_node_8h_source}{}\doxysection{Sprite\+Node.\+h}
+\label{_sprite_node_8h_source}\index{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/SpriteNode.h@{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/SpriteNode.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Entity.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}CommandQueue.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_sprite_node}{SpriteNode}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_sprite_node_1_1_back_ground_mover}{BackGroundMover}}}
+\DoxyCodeLine{9     \{}
+\DoxyCodeLine{10         XMFLOAT3 velocity;}
+\DoxyCodeLine{11     }
+\DoxyCodeLine{12         \mbox{\hyperlink{struct_sprite_node_1_1_back_ground_mover}{BackGroundMover}}(\textcolor{keywordtype}{float} vx, \textcolor{keywordtype}{float} vy, \textcolor{keywordtype}{float} vz) : velocity(vx, vy, vz)\{\}}
+\DoxyCodeLine{13         \textcolor{keywordtype}{void} operator() (\mbox{\hyperlink{class_scene_node}{SceneNode}}\& node, \textcolor{keyword}{const} GameTimer\& gt) }
+\DoxyCodeLine{14         \{}
+\DoxyCodeLine{15             \mbox{\hyperlink{class_sprite_node}{SpriteNode}}\& spriteNode = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_sprite_node}{SpriteNode}}\&\textcolor{keyword}{>}(node);}
+\DoxyCodeLine{16             spriteNode.move(velocity);}
+\DoxyCodeLine{17         \}}
+\DoxyCodeLine{18     \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \mbox{\hyperlink{class_sprite_node}{SpriteNode}}(\mbox{\hyperlink{class_game}{Game}}* game);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} Update(\textcolor{keyword}{const} GameTimer gt);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{float} backgroundSpeed;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} drawCurrent() \textcolor{keyword}{const};}
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} buildCurrent();}
+\DoxyCodeLine{28 \};}
+
+\end{DoxyCode}

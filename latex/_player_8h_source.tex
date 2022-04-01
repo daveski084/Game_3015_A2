@@ -1,0 +1,36 @@
+\hypertarget{_player_8h_source}{}\doxysection{Player.\+h}
+\label{_player_8h_source}\index{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/Player.h@{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/Player.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}CommandQueue.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Aircraft.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}World.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_player_1_1_aircraft_mover}{AircraftMover}}}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         XMFLOAT3 velocity;}
+\DoxyCodeLine{12         }
+\DoxyCodeLine{13         \mbox{\hyperlink{struct_player_1_1_aircraft_mover}{AircraftMover}}(\textcolor{keywordtype}{float} vx, \textcolor{keywordtype}{float} vy, \textcolor{keywordtype}{float} vz) : velocity(vx, vy, vz) \{\}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{keywordtype}{void} operator() (\mbox{\hyperlink{class_scene_node}{SceneNode}}\& node, \textcolor{keyword}{const} GameTimer\& gt) }
+\DoxyCodeLine{16         \{}
+\DoxyCodeLine{17             \mbox{\hyperlink{class_aircraft}{Aircraft}}\& aircraft = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_aircraft}{Aircraft}}\&\textcolor{keyword}{>}(node);}
+\DoxyCodeLine{18             aircraft.move(velocity);}
+\DoxyCodeLine{19         \}}
+\DoxyCodeLine{20         }
+\DoxyCodeLine{21     \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \textcolor{keyword}{const} \textcolor{keywordtype}{float} playerSpeed = 0.001f;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} handleEvent(\mbox{\hyperlink{class_command_queue}{CommandQueue}}\& commands);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} handleRealtimeInput(\mbox{\hyperlink{class_command_queue}{CommandQueue}}\& commands);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+
+\end{DoxyCode}

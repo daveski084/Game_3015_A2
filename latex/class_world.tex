@@ -1,0 +1,74 @@
+\hypertarget{class_world}{}\doxysection{World Class Reference}
+\label{class_world}\index{World@{World}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_world_a712eb4a5b0d12588dd61d10c91b83366}\label{class_world_a712eb4a5b0d12588dd61d10c91b83366}} 
+{\bfseries World} (\mbox{\hyperlink{class_game}{Game}} $\ast$window)
+\item 
+\mbox{\Hypertarget{class_world_a36c003f54e14e022a360551af5e7923e}\label{class_world_a36c003f54e14e022a360551af5e7923e}} 
+void {\bfseries update} (const Game\+Timer \&gt)
+\item 
+\mbox{\Hypertarget{class_world_ab51a17ccbb108616daacd0c34973dc8d}\label{class_world_ab51a17ccbb108616daacd0c34973dc8d}} 
+void {\bfseries draw} ()
+\item 
+\mbox{\Hypertarget{class_world_ae7df49f5d488e5cd1254bf360966f410}\label{class_world_ae7df49f5d488e5cd1254bf360966f410}} 
+void {\bfseries build\+Scene} ()
+\item 
+\mbox{\Hypertarget{class_world_af224b413f30c86ec99d042d0f4df56ee}\label{class_world_af224b413f30c86ec99d042d0f4df56ee}} 
+\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \& {\bfseries get\+Command\+Queue} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_world_a7580b1f38bb9018be3eeef74462b4b2f}\label{class_world_a7580b1f38bb9018be3eeef74462b4b2f}} 
+enum {\bfseries Layer} \{ {\bfseries Background}
+, {\bfseries Air}
+, {\bfseries Layer\+Count}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_world_a625a8dbdd805000904fb376215ca4c0a}\label{class_world_a625a8dbdd805000904fb376215ca4c0a}} 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ {\bfseries m\+Game}
+\item 
+\mbox{\Hypertarget{class_world_abf9d49d6f67de1caff82e111a4f29040}\label{class_world_abf9d49d6f67de1caff82e111a4f29040}} 
+\mbox{\hyperlink{class_scene_node}{Scene\+Node}} $\ast$ {\bfseries m\+Scene\+Graph}
+\item 
+\mbox{\Hypertarget{class_world_a6edbba54ac354295d50128255c7a0e70}\label{class_world_a6edbba54ac354295d50128255c7a0e70}} 
+std\+::array$<$ \mbox{\hyperlink{class_scene_node}{Scene\+Node}} $\ast$, Layer\+Count $>$ {\bfseries m\+Scene\+Layers}
+\item 
+\mbox{\Hypertarget{class_world_a3be772106be584dff01efa4a27fc13a7}\label{class_world_a3be772106be584dff01efa4a27fc13a7}} 
+XMFLOAT4 {\bfseries m\+World\+Bounds}
+\item 
+\mbox{\Hypertarget{class_world_a8bde7886e9d66e6bda46921d97186f66}\label{class_world_a8bde7886e9d66e6bda46921d97186f66}} 
+XMFLOAT2 {\bfseries m\+Spawn\+Position}
+\item 
+\mbox{\Hypertarget{class_world_a5e511d7599995d30084959c91d98e13d}\label{class_world_a5e511d7599995d30084959c91d98e13d}} 
+\mbox{\hyperlink{class_aircraft}{Aircraft}} $\ast$ {\bfseries m\+Player\+Aircraft}
+\item 
+\mbox{\Hypertarget{class_world_a6f3b09177168e5a7b34fd9418a94136a}\label{class_world_a6f3b09177168e5a7b34fd9418a94136a}} 
+\mbox{\hyperlink{class_sprite_node}{Sprite\+Node}} $\ast$ {\bfseries m\+Background}
+\item 
+\mbox{\Hypertarget{class_world_a9c75c7433b37fc02925d6425e1b7f8a9}\label{class_world_a9c75c7433b37fc02925d6425e1b7f8a9}} 
+\mbox{\hyperlink{class_aircraft}{Aircraft}} $\ast$ {\bfseries m\+Enemy}
+\item 
+\mbox{\Hypertarget{class_world_a1c2d240ef6483547a5c2e5ded0e3a150}\label{class_world_a1c2d240ef6483547a5c2e5ded0e3a150}} 
+float {\bfseries m\+Scroll\+Speed}
+\item 
+\mbox{\Hypertarget{class_world_a6482b97de0298a12bde2dc8854c6c709}\label{class_world_a6482b97de0298a12bde2dc8854c6c709}} 
+XMFLOAT3 {\bfseries aircraft\+Size}
+\item 
+\mbox{\Hypertarget{class_world_afde58abf7d774d0985ddaa6a3658706e}\label{class_world_afde58abf7d774d0985ddaa6a3658706e}} 
+XMFLOAT3 {\bfseries enemy\+Size}
+\item 
+\mbox{\Hypertarget{class_world_ac61a05f472f92394ba030ef616656ea2}\label{class_world_ac61a05f472f92394ba030ef616656ea2}} 
+\mbox{\hyperlink{class_command_queue}{Command\+Queue}} {\bfseries c\+Queue}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/david/\+Downloads/\+Game\+Engine\+Dev-\/\+II-\/\+A2-\/master/\+GAME\+\_\+3015\+\_\+\+A2\+\_\+\+Master/\+A2/\+A2/World.\+h\item 
+C\+:/\+Users/david/\+Downloads/\+Game\+Engine\+Dev-\/\+II-\/\+A2-\/master/\+GAME\+\_\+3015\+\_\+\+A2\+\_\+\+Master/\+A2/\+A2/World.\+cpp\end{DoxyCompactItemize}

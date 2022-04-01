@@ -1,0 +1,52 @@
+\hypertarget{_world_8h_source}{}\doxysection{World.\+h}
+\label{_world_8h_source}\index{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/World.h@{C:/Users/david/Downloads/GameEngineDev-\/II-\/A2-\/master/GAME\_3015\_A2\_Master/A2/A2/World.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}SceneNode.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Aircraft.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}SpriteNode.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}CommandQueue.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_world}{World}} }
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_world}{World}}(\mbox{\hyperlink{class_game}{Game}}* window);}
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} update(\textcolor{keyword}{const} GameTimer\& gt);}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} draw();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{comment}{//void loadTextures();}}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} buildScene();}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_command_queue}{CommandQueue}}\& getCommandQueue();}
+\DoxyCodeLine{18     }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{keyword}{enum} Layer}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         Background,}
+\DoxyCodeLine{24         Air,}
+\DoxyCodeLine{25         LayerCount}
+\DoxyCodeLine{26     \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_game}{Game}}* mGame;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \mbox{\hyperlink{class_scene_node}{SceneNode}}* mSceneGraph;}
+\DoxyCodeLine{32     std::array<SceneNode*, LayerCount> mSceneLayers;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     XMFLOAT4 mWorldBounds;}
+\DoxyCodeLine{35     XMFLOAT2 mSpawnPosition;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// Entities}}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_aircraft}{Aircraft}}* mPlayerAircraft;}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_sprite_node}{SpriteNode}}*   mBackground;}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_aircraft}{Aircraft}}* mEnemy;}
+\DoxyCodeLine{41     }
+\DoxyCodeLine{42     \textcolor{keywordtype}{float} mScrollSpeed;}
+\DoxyCodeLine{43     XMFLOAT3 aircraftSize;}
+\DoxyCodeLine{44     XMFLOAT3 enemySize;}
+\DoxyCodeLine{45     \mbox{\hyperlink{class_command_queue}{CommandQueue}} cQueue;}
+\DoxyCodeLine{46 \};}
+
+\end{DoxyCode}
